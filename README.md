@@ -58,6 +58,9 @@ List.index( 'xyz' )    # 1
 ### any
 ### lambda
 
+### encode
+### decode
+
 ## String
 ### join
 ### split
