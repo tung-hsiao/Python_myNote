@@ -60,7 +60,7 @@ List.index( 'xyz' )    # 1
 ### encode
 ### decode
 
-## String
+## -String
 ### join
 ### split
 
@@ -301,6 +301,35 @@ for i in range(5):
 
 
 ## -Class
+### instance attribute
+```
+class chair(object):
+    def __init__(slef,color,size):
+        slef.color = color
+        slef.size = size
+
+chair_1 = chair('black','small')
+print(chair_1.color, chair_1.size)  # black small
+
+chair_1.size = 'large'
+print(chair_1.color, chair_1.size)  # black large
+```
+### class attribute
+```
+class chair(object):
+    legs = 4
+    def __init__(slef,color,size):
+        slef.color = color
+        slef.size = size
+
+chair_1 = chair('black','small')
+chair_2 = chair('silver','large')
+print(chair_1.legs, chair_2.legs)  # 4 4
+
+chair.legs = 3
+print(chair_1.legs, chair_2.legs)  # 3 3
+```
+
 ### Parent
 ###### overwrite attribute
 ```
@@ -321,6 +350,8 @@ print(parent.x, child_1.x, child_2.x)  # 1 2 1
 parent.x = 3
 print(parent.x, child_1.x, child_2.x)  # 3 2 3
 ```
+
+
 
 
 
