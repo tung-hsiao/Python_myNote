@@ -1,4 +1,4 @@
-from flask import Flask,render_template,Response,request
+from flask import Flask,render_template,Response
 import live
 
 app = Flask(__name__)

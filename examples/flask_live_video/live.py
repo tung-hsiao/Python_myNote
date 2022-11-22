@@ -1,10 +1,8 @@
-
-import redis
-import os 
 import cv2
 import numpy as np
 
 vid = cv2.VideoCapture(0)
+# vid = cv2.VideoCapture(url)
 
 def gen_one_frame():
     while True:
@@ -15,7 +13,6 @@ def gen_one_frame():
         else:
             print("Frame is None")
             break
-
 
 def gen_surveillance():
     for frame in gen_one_frame():
