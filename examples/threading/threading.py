@@ -19,5 +19,9 @@ if __name__ == '__main__':
     thread_2.setDaemon(True)
     thread_2.start()
 
+    ## Stop main thread, wait the thread to finish
+    # thread_1.join()
+    # thread_2.join()
+
     while True:
         pass
