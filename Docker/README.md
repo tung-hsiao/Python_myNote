@@ -15,17 +15,17 @@ exit
 # How to build image
 ```
 ## build docker image
-image_name="itri-go/mini-flow-control:21.07"
+image_name="My_image"
 docker build -t "$image_name" .
 ```
 
 # Run Container 
 ### run as deamon 
 ```
-container_name="flow-control-01"
-image_name="itri-go/mini-flow-control:21.07"
+container_name="My_container"
+image_name="My_image"
 docker run -d --name ${container_name} \
-    -p 5001:5000 \
+    -p 5000:5000 \
     ${image_name} \
     tail -f /dev/null
 ```
