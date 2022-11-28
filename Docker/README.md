@@ -8,8 +8,10 @@ docker-compose build
 docker-compose up -d
 docker-compose down
 
-docker exec -it [contain ID] bash
+docker exec -it [container ID] bash
 exit
+
+docker logs [container ID]
 ```
 
 # How to build image

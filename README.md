@@ -16,7 +16,11 @@ help(myFunction)
 print(myFunction.__doc__)
 ```
 
-
+## -Import paraent directory
+```
+import sys
+sys.path.insert(0,'..')
+```
 
 
 
