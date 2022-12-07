@@ -37,16 +37,16 @@ RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 ## 程式需要的 參數設定
-### 資料庫連綫資訊
 ENV VARIABLE_A="AAA"
 ENV URL_B="BBBBB"
 
 
 ## 建立資料夾
-# RUN mkdir -p /var/myLog/
+# RUN mkdir -p /opt/myFolder/
 
 ## Set work directory
 WORKDIR /opt/
+COPY . /opt
 
 ## install dependencies
 COPY requirements.txt ./
@@ -55,7 +55,7 @@ RUN pip install -r requirements.txt
 ## port
 EXPOSE 5000
 
-# CMD python main.py
+# CMD python /opt/main.py
 # CMD tail -f /dev/null
 
 

@@ -4,15 +4,15 @@ services:
     my-module:
         build:
             context: .
-        image: itri-go/mini_fusion_tp:v8.1.1_robust
+        image: my-Image:v8.1.1
         container_name: my-module
         environment:
             - VARIABLE_A=90
         volumes:
-             - /opt/Local_Log/:/var/log/myLog
+             - /opt/local_folder/:/opt/myFolder/   # local:docker
         ports:
             - 5000:5000
 
         # restart: always
-        # command: python ./xxx.py
+        # command: python /opt/xxx.py
         # command: tail -f /dev/null  # 不執行任何程式, just keep container alive
