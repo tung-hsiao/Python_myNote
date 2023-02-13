@@ -1,8 +1,26 @@
 
 # Linux command
 ```
-shutdown -h now 立即關機 
+shutdown -h now     立即關機 
 reboot
+
+sudo su                切換成root帳號
+su OTHER_ACCOUNT    切換成其他帳號
+
+
+
+swapoff -a          #關閉swap (記憶體置換)
+
+
+# 把命令放到背景執行
+CMD &    (add a '&' in the end)
+
+# 查詢現行的背景工作可使用
+jobs -l
+
+# 把工作帶回前景
+fg [PID]
+
 ```
 
 
