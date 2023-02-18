@@ -12,6 +12,9 @@ docker exec -it [container ID] bash
 exit
 
 docker logs [container ID]
+
+docker kill [my_container]  # 先kill
+docker rm [my_container]    # 再rm
 ```
 
 # How to build image
