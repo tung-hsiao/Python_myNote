@@ -21,6 +21,18 @@ jobs -l
 # 把工作帶回前景
 fg [PID]
 
+# 將該資料夾下所有檔案之權限改成777
+sudo chmod 777 -R .
+
+```
+
+# Network
+```
+# 顯示網路介面的現行配置
+ifconfig
+
+# IP routing table
+route
 ```
 
 
