@@ -7,12 +7,9 @@ reboot
 sudo su                切換成root帳號
 su OTHER_ACCOUNT    切換成其他帳號
 
-
-
 swapoff -a          #關閉swap (記憶體置換)
 
 # tmux
-```
 tmux ls              # list all Sessions
 tmux attach -t 0     # attach to [session#]
 
@@ -21,8 +18,6 @@ Ctrl+b 再輸入 s	select session with UI
 
 tmux list-session
 tmux kill-session -t
-```
-
 
 # 把命令放到背景執行
 CMD &    (add a '&' in the end)
