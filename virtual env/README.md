@@ -34,4 +34,7 @@ conda update conda     # 更新 conda 版本指令
 ## pip
 ```
 pip install -r requirements.txt
+
+pip freeze --local > requirements.txt
+pip show [package name]
 ```
