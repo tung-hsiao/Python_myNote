@@ -1,10 +1,23 @@
-# Docker compose GPU
+# Docker compose
+
+### Command
 ```
-# Docker Compose v1.28.0+ allows to define GPU reservations using the device structure defined in the Compose Specification
+docker-compose version
+docker-compose build
+docker-compose up
+docker-compose up -d
+docker-compose down
+```
+
+### GPU
+```
+# Update Docker Compose to v1.28.0+ 
+# v1.28.0+ allows to define GPU reservations using the device structure defined in the Compose Specification
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
+### Example
 ```
 version: '3'
 services:
