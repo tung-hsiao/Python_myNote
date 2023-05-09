@@ -8,6 +8,7 @@ services:
         container_name: my-module
         environment:
             - VARIABLE_A=90
+            - VARIABLE_B=myString
         volumes:
              - /opt/local_folder/:/opt/myFolder/   # local:docker
         # network_mode: "host"
