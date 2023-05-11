@@ -1,0 +1,50 @@
+FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu20.04
+
+## 設定系統語系 UTF-8
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y locales && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    dpkg-reconfigure --frontend=noninteractive locales && \
+    update-locale LANG=en_US.UTF-8
+
+ENV LANG en_US.UTF-8 
+
+## 安裝 Python
+RUN apt-get update \
+    && apt-get install -y python3-pip python3-dev libturbojpeg \
+    && apt-get install -y libglib2.0-0 libgl1-mesa-glx \          
+    && cd /usr/local/bin \
+    && ln -s /usr/bin/python3 python \
+    && pip3 install --upgrade pip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONIOENCODING utf-8
+ENV PYTHONUNBUFFERED=1
+
+## 設定系統 時區 Asia/Taipei
+ENV TZ="Asia/Taipei"
+ENV DEBIAN_FRONTEND noninteractive
+WORKDIR /opt
+COPY . /opt
+
+## 爲了開發方便 安裝 curl, vim
+RUN apt-get update && \
+    apt-get -y install tzdata curl vim && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+## 建立資料夾
+# RUN mkdir -p /var/myLog/
+
+## Set work directory
+WORKDIR /opt/
+COPY . /opt/
+
+## install dependencies
+RUN apt update
+RUN pip3 install torch torchvision torchaudio
+RUN pip3 install --no-cache -r requirements.txt
+
+# CMD python3 /opt/yolo_mmWave.py
+# CMD tail -f /dev/null
