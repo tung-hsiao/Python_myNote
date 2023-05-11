@@ -11,10 +11,15 @@ services:
             - VARIABLE_B=myString
         volumes:
              - /opt/local_folder/:/opt/myFolder/   # local:docker
-        # network_mode: "host"
+#       devices:
+#            - /dev/ttyUSB0:/dev/ttyUSB0
+             
+#         network_mode: "host"
+        
         ports:
             - 5000:5000
 
         # restart: always
+        
         # command: python /opt/xxx.py
         # command: tail -f /dev/null  # 不執行任何程式, just keep container alive
