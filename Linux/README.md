@@ -31,6 +31,9 @@ fg [PID]
 # 將該資料夾下所有檔案之權限改成777
 sudo chmod 777 -R .
 
+# How to download a file from server using SSH?
+scp username@remotehost.ip:file.txt /local/dir
+
 ```
 
 # Network
