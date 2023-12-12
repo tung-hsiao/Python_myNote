@@ -11,7 +11,7 @@ cd 到 myenv/bin下 source activate
 ```
 conda create --name myenv python=3.9  # create env
 conda env list                        # list exist env
-activate myenv                        # activate env
+conda activate myenv                        # activate env
 conda list                            # list packages in env
 
 conda env remove -n myenv             # remove env
