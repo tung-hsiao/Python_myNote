@@ -62,3 +62,11 @@ v：切換到視覺模式，可以使用選擇文字，方便閱讀和強調
 :!wq：強制儲存並離開
 ```
 
+# ssh
+在linux環境中，開啟terminal，type以下指令。安裝完成後，服務默認開啟。
+```
+sudo apt-get install openssh-server
+```
+
+
+
