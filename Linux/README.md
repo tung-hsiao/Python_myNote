@@ -45,6 +45,11 @@ ifconfig
 route
 ```
 
+# 即時監控網路流量
+```
+sudo apt install iftop
+sudo iftop
+```
 
 # Vim
 ```
