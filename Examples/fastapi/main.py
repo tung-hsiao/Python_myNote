@@ -26,6 +26,10 @@ async def create_item(item: Item):
 
 
 '''
+Start the server by using CMD: uvicorn main:app --reload
+'''
+
+'''
 You can test this server using tools like cURL, Postman, or any other HTTP client. Here's an example cURL command to create a new item:
 curl -X POST "http://127.0.0.1:8000/items/" -H "Content-Type: application/json" -d '{"name":"New Item","description":"A new item","price":10.5,"tax":1.5}'
 '''
